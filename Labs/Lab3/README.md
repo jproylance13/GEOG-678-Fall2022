@@ -5,3 +5,5 @@ Part 2 Code Acadmey CSS
 
 
 Part 3 Resume
+<DOCTYPE html>
+  <h1>john</h1>
