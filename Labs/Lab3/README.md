@@ -5,5 +5,4 @@ Part 2 Code Acadmey CSS
 
 
 Part 3 Resume
-<DOCTYPE html>
-  <h1>john</h1>
+<script src="https://gist.github.com/jproylance13/0ea08478eabc7b8dad7540f9383719db.js"></script>
