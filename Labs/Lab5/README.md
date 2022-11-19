@@ -1,2 +1,2 @@
 Tutorial # 1
-<img width="507" alt="tutoral 1 ss" src="https://user-images.githubusercontent.com/112281942/202870460-ac06d3a8-93bf-4933-9c26-203b8e3edb16.PNG">
+![image](https://user-images.githubusercontent.com/112281942/202871434-3229ac54-7b3a-4085-91c2-93cb7bf3b2dd.png)
