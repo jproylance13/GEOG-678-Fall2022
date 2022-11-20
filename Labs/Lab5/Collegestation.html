@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>John's first Web Map</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+   
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+   
+   <style> 
+   #map { height: 1000px; 
+		  width: 1000px;
+		  }
+   </style>
+   
+	</head>
+	<body>
+	<div id="map"></div>
+	<script>
+	var map = L.map('map').setView([30.617620, -96.336560], 13);
+	
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+	
+	var ombuilding = L.icon ({
+		iconUrl:'https://pbs.twimg.com/profile_images/411953318076755968/qrMmLUjA.jpeg', 
+		iconSize:[50,50],
+		iconAnchor:[02,50],
+	})
+
+	var marker = L.marker([30.617620, -96.336560],{icon:ombuilding}).addTo(map).bindPopup("<b>O&M Building</b><br>Coding Here!.").openPopup();  
+	
+	var academicbuilding = L.icon ({
+		iconUrl:'https://leafletjs.com/examples/custom-icons/leaf-red.png', 
+		iconSize:[50,50],
+		iconAnchor:[02,50],
+	})
+	
+	var marker = L.marker([30.615773, -96.340828],{icon:academicbuilding}).addTo(map).bindPopup("<b>Academic Building</b><br>Learning Here!.").openPopup();  
+	
+	var circle = L.circle([30.609771, -96.340528], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 200
+}).addTo(map).bindPopup("Kyle Field.");
+
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+
+
+	</script>
+	</body>
+</html>
